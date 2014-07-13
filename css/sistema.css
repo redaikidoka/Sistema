@@ -1,0 +1,12 @@
+
+.mote {
+    width: 24px;
+    height: 24px;
+    padding-right: 2px;
+}
+
+.mote-empty {
+    opacity: 25%;
+    color: #ccc;
+    background-color: #ccc;
+}
