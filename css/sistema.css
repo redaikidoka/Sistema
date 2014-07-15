@@ -1,12 +1,39 @@
 
+
 .mote {
     width: 24px;
     height: 24px;
-    padding-right: 2px;
+    padding: 0;
 }
 
+dd .mote {
+    width: 18px;
+    height: 18px;
+}
+
+.mote-solar {
+    color: #CDB11F;
+}
 .mote-empty {
     opacity: 25%;
     color: #ccc;
     background-color: #ccc;
+}
+
+/* dark yellow: CDB11F
+    light yellow:  CDCB80
+*/
+
+.panel-title {
+    
+    color: #333 ;
+    text-shadow:
+    -1px -1px 0 #CDCB80,
+    1px -1px 0 #CDCB80,
+    -1px 1px 0 #CDCB80,
+    1px 1px 0 #CDCB80;
+}
+
+.panel-heading {
+    background-color: #CDCB80 !important;
 }
