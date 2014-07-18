@@ -1,0 +1,56 @@
+
+
+.mote {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: inline;
+}
+
+dd .mote {
+    width: 18px;
+    height: 18px;
+    display: inline;
+}
+
+.mote-solar {
+    color: #CDB11F;
+}
+.mote-empty {
+    opacity: 25%;
+    color: #ccc;
+}
+
+span.mote-empty {
+		color: #646464;
+		opacity: 100%;
+}
+
+/* dark yellow: CDB11F
+    light yellow:  CDCB80
+*/
+
+.panel-title {
+    
+    color: #333 ;
+    text-shadow:
+    -1px -1px 0 #CDCB80,
+    1px -1px 0 #CDCB80,
+    -1px 1px 0 #CDCB80,
+    1px 1px 0 #CDCB80;
+}
+
+.panel-heading {
+    background-color: #CDCB80 !important;
+}
+
+.navigator {
+    background-color: #A4A821; 
+    z-index: 10;
+}
+
+.navigator a {
+    color: #FFF425;
+}
+
+.navicon { color: #FFF425; }
