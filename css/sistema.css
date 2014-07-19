@@ -13,7 +13,7 @@ dd .mote {
     display: inline;
 }
 
-.mote-solar {
+.mote-solar, .solar {
     color: #CDB11F;
 }
 .mote-empty {
@@ -54,3 +54,10 @@ span.mote-empty {
 }
 
 .navicon { color: #FFF425; }
+
+.list-group-item {
+	padding: 5px 10px;
+}
+.list-group {
+	max-width: 260px;
+}
