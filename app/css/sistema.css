@@ -1,0 +1,137 @@
+body {
+  min-height: 2000px;
+  padding-top: 120px;
+}
+
+
+
+/* FROM NAVBAR THINGY */
+
+/*
+ * Base structure
+ */
+
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+
+.mote {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: inline;
+}
+
+dd .mote {
+    width: 18px;
+    height: 18px;
+    display: inline;
+}
+
+.mote-solar, .solar {
+    color: #CDB11F;
+}
+.mote-empty {
+    opacity: 25%;
+    color: #ccc;
+}
+
+span.mote-empty {
+		color: #646464;
+		opacity: 100%;
+}
+
+/* dark yellow: CDB11F
+    light yellow:  CDCB80
+*/
+
+.panel-title {
+    
+    color: #333 ;
+    text-shadow:
+    -1px -1px 0 #CDCB80,
+    1px -1px 0 #CDCB80,
+    -1px 1px 0 #CDCB80,
+    1px 1px 0 #CDCB80;
+}
+
+.panel-heading {
+    background-color: #CDCB80 !important;
+}
+
+.navigator {
+    background-color: #A4A821; 
+    z-index: 10;
+}
+
+.navigator a {
+    color: #FFF425;
+}
+
+.navicon { color: #FFF425; }
+
+
+.list-group-item {
+	padding: 5px 10px;
+}
+
+.list-group .ability{
+	max-width: 260px;
+}
+
+
+
+.favored {
+	font-style:italic;
+	font-weight: bold;
+}
+
+.excellency {
+	background-color: #ccc;
+	color: #333;
+	font-weight: normal;
+	font-size:smaller;
+}
+
+.stat {
+	font-variant: normal;
+	text-transform: capitalize;
+	font-style: normal;
+	
+}
+
