@@ -94,6 +94,7 @@ span.mote-empty {
     background-color: #CDCB80 !important;
 }
 
+/* Popup heading zap-around navigator */
 .navigator {
     background-color: #A4A821; 
     z-index: 10;
