@@ -1,0 +1,136 @@
+{
+    "name": "Ash of the Phoenix",
+    "exalt type": "Solar",
+    "caste": "Night",
+    "concept": "Intelligence gathering Nightbringer exalted from within the ranks of the Wyld Hunt itself",
+    "motivation": "To decipher the nature and root cause of the curse that afflicts the Solars",
+    "anima banner": "A rising, silently screaming Phoenix, englfing him from the feet up",
+    "attributes": {
+        "strength": {
+            "min": 1,
+            "max": 5,
+            "value": 2,
+            "section": "physical"
+        },
+        "dexterity": {
+            "min": 1,
+            "max": 5,
+            "value": 5,
+            "section": "physical"
+        },
+        "stamina": {
+            "min": 1,
+            "max": 5,
+            "value": 2,
+            "section": "physical"
+        },
+        "charisma": {
+            "min": 1,
+            "max": 5,
+            "value": 3,
+            "section": "social"
+        },
+        "manipulation": {
+            "min": 1,
+            "max": 5,
+            "value": 2,
+            "section": "social"
+        },
+        "appearance": {
+            "min": 1,
+            "max": 5,
+            "value": 2,
+            "section": "social"
+        },
+        "perception": {
+            "min": 1,
+            "max": 5,
+            "value": 5,
+            "section": "mental"
+        },
+        "intelligence": {
+            "min": 1,
+            "max": 5,
+            "value": 3,
+            "section": "mental"
+        },
+        "wits": {
+            "min": 1,
+            "max": 5,
+            "value": 3,
+            "section": "mental"
+        }
+    },
+    "abilities": {
+        "archery": {
+            "min": 1,
+            "max": 5,
+            "value": 5,
+            "caste": "dawn",
+            "favored": true
+        },
+        "martial arts": {
+            "min": 1,
+            "max": 5,
+            "value": 0,
+            "caste": "dawn",
+            "favored": false
+        },
+        "melee": {
+            "min": 1,
+            "max": 5,
+            "value": 5,
+            "caste": "dawn",
+            "favored": false
+        },
+        "thrown": {
+            "min": 1,
+            "max": 5,
+            "value": 0,
+            "caste": "dawn",
+            "favored": false
+        },
+        "war": {
+            "min": 1,
+            "max": 5,
+            "value": 0,
+            "caste": "dawn",
+            "favored": false
+        },
+        "athletics": {
+            "min": 1,
+            "max": 5,
+            "value": 3,
+            "caste": "night",
+            "favored": true
+        },
+        "awareness": {
+            "min": 1,
+            "max": 5,
+            "value": 3,
+            "caste": "night",
+            "favored": true
+        },
+        "dodge": {
+            "min": 1,
+            "max": 5,
+            "value": 5,
+            "caste": "night",
+            "favored": true
+        },
+        "larceny": {
+            "min": 1,
+            "max": 5,
+            "value": 1,
+            "caste": "night",
+            "favored": true
+        },
+        "stealth": {
+            "min": 1,
+            "max": 5,
+            "value": 3,
+            "caste": "night",
+            "favored": true
+        }        
+    }
+}
