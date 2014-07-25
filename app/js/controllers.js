@@ -11,6 +11,11 @@ sistemaControllers.controller('CharacterCtrl', ['$scope', '$http',
 		});
 		
 		$scope.happy = true;
+		
+		$scope.getNumber = function(num) {
+    	return new Array(num);   
+		}
+		
 }]);
 
 

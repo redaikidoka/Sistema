@@ -4,57 +4,76 @@
     "caste": "Night",
     "concept": "Intelligence gathering Nightbringer exalted from within the ranks of the Wyld Hunt itself",
     "motivation": "To decipher the nature and root cause of the curse that afflicts the Solars",
-    "anima banner": "A rising, silently screaming Phoenix, englfing him from the feet up",
+    "anima-banner": "A rising, silently screaming Phoenix, englfing him from the feet up",
+    "anima": "Rising Phoenix",
     "attributes": {
         "strength": {
+            "name": "strength",
+            "abr": "str",
             "min": 1,
             "max": 5,
             "value": 2,
             "section": "physical"
         },
         "dexterity": {
+            "name": "dexterity",
+            "abr": "dex",
             "min": 1,
             "max": 5,
             "value": 5,
             "section": "physical"
         },
         "stamina": {
+            "name": "stamina",
+            "abr": "sta",
             "min": 1,
             "max": 5,
             "value": 2,
             "section": "physical"
         },
         "charisma": {
+            "name": "charisma",
+            "abr": "cha",
             "min": 1,
             "max": 5,
             "value": 3,
             "section": "social"
         },
         "manipulation": {
+            "name": "manipulation",
+            "abr": "man",
             "min": 1,
             "max": 5,
             "value": 2,
             "section": "social"
         },
         "appearance": {
+            "name": "appearance",
+            "abr": "app",
             "min": 1,
             "max": 5,
             "value": 2,
             "section": "social"
         },
         "perception": {
+            "name": "appearance",
+            "abr": "app",
             "min": 1,
             "max": 5,
             "value": 5,
             "section": "mental"
         },
         "intelligence": {
+            "name": "intelligence",
+            "abr": "int",
             "min": 1,
             "max": 5,
             "value": 3,
             "section": "mental"
         },
         "wits": {
+            "name": "wits",
+            "abr": "wit",
             "min": 1,
             "max": 5,
             "value": 3,
@@ -63,74 +82,253 @@
     },
     "abilities": {
         "archery": {
-            "min": 1,
+            "name": "archery",
+            "abr": "arch",
+            "min": 0,
             "max": 5,
             "value": 5,
             "caste": "dawn",
             "favored": true
         },
-        "martial arts": {
-            "min": 1,
+        "martial_arts": {
+            "name": "martial arts",
+            "abr": "ma",
+            "min": 0,
             "max": 5,
             "value": 0,
             "caste": "dawn",
             "favored": false
         },
         "melee": {
-            "min": 1,
+            "name": "melee",
+            "abr": "mel",
+            "min": 0,
             "max": 5,
             "value": 5,
             "caste": "dawn",
             "favored": false
         },
         "thrown": {
-            "min": 1,
+            "name": "thrown",
+            "abr": "thr",
+            "min": 0,
             "max": 5,
             "value": 0,
             "caste": "dawn",
             "favored": false
         },
         "war": {
-            "min": 1,
+            "name": "war",
+            "abr": "war",
+            "min": 0,
             "max": 5,
             "value": 0,
             "caste": "dawn",
             "favored": false
         },
         "athletics": {
-            "min": 1,
+            "name": "athletics",
+            "abr": "ath",
+            "min": 0,
             "max": 5,
             "value": 3,
             "caste": "night",
             "favored": true
         },
         "awareness": {
-            "min": 1,
+            "name": "awareness",
+            "abr": "awa",
+            "min": 0,
             "max": 5,
             "value": 3,
             "caste": "night",
             "favored": true
         },
         "dodge": {
-            "min": 1,
+            "name": "dodge",
+            "abr": "dod",
+            "min": 0,
             "max": 5,
             "value": 5,
             "caste": "night",
             "favored": true
         },
         "larceny": {
-            "min": 1,
+            "name": "larceny",
+            "abr": "lar",
+            "min": 0,
             "max": 5,
             "value": 1,
             "caste": "night",
             "favored": true
         },
         "stealth": {
-            "min": 1,
+            "name": "stealth",
+            "abr": "stlh",
+            "min": 0,
             "max": 5,
             "value": 3,
             "caste": "night",
             "favored": true
-        }        
+        },
+        "integrity": {
+            "name": "integrity",
+            "abr": "intg",
+            "min": 0,
+            "max": 5,
+            "value": 1,
+            "caste": "zenith",
+            "favored": true
+        },
+        "performance": {
+            "name": "performance",
+            "abr": "perf",
+            "min": 0,
+            "max": 5,
+            "value": 0,
+            "caste": "zenith",
+            "favored": false
+        },            
+        "presence": {
+            "name": "presence",
+            "abr": "pres",
+            "min": 0,
+            "max": 5,
+            "value": 1,
+            "caste": "zenith",
+            "favored": false
+        },
+        "resistance": {
+            "name": "resistance",
+            "abr": "rsst",
+            "min": 0,
+            "max": 5,
+            "value": 2,
+            "caste": "zenith",
+            "favored": false
+        },
+        "survival": {
+            "name": "survival",
+            "abr": "surv",
+            "min": 0,
+            "max": 5,
+            "value": 1,
+            "caste": "zenith",
+            "favored": false
+        },
+        "bureaucracy": {
+            "name": "bureaucracy",
+            "abr": "bure",
+            "min": 0,
+            "max": 5,
+            "value": 0,
+            "caste": "eclipse",
+            "favored": false
+        },
+        "linguistics": {
+            "name": "linguistics",
+            "abr": "ling",
+            "min": 0,
+            "max": 5,
+            "value": 1,
+            "caste": "eclipse",
+            "favored": false
+        },
+        "ride": {
+            "name": "ride",
+            "abr": "ride",
+            "min": 0,
+            "max": 5,
+            "value": 0,
+            "caste": "eclipse",
+            "favored": false
+        },
+        "sail": {
+            "name": "sail",
+            "abr": "sail",
+            "min": 0,
+            "max": 5,
+            "value": 0,
+            "caste": "eclipse",
+            "favored": false
+        },
+        "socialize": {
+            "name": "socialize",
+            "abr": "socl",
+            "min": 0,
+            "max": 5,
+            "value": 1,
+            "caste": "eclipse",
+            "favored": false
+        },
+        "craft": {
+            "name": "craft",
+            "abr": "craf",
+            "min": 0,
+            "max": 5,
+            "value": 0,
+            "caste": "twilight",
+            "favored": false
+        },
+        "investigation": {
+            "name": "investigation",
+            "abr": "inv",
+            "min": 0,
+            "max": 5,
+            "value": 3,
+            "caste": "twilight",
+            "favored": true
+        },
+        "lore": {
+            "name": "lore",
+            "abr": "lore",
+            "min": 0,
+            "max": 5,
+            "value": 2,
+            "caste": "twilight",
+            "favored": true
+        },
+        "medicine": {
+            "name": "medicine",
+            "abr": "medi",
+            "min": 0,
+            "max": 5,
+            "value": 0,
+            "caste": "twilight",
+            "favored": false
+        },
+        "occult": {
+            "name": "occult",
+            "abr": "occ",
+            "min": 0,
+            "max": 5,
+            "value": 0,
+            "caste": "twilight",
+            "favored": false
+        }
+    },
+    "backgrounds": {
+      "max": 5,
+        "artifact": {
+            "name": "artifact",
+            "abr": "arti",
+            "value": 5,
+            "artifacts": [
+              { "name": "Radiant Arbiter Behind the Mindful Veil",
+              "value": 5}
+            ]
+        },
+        "resources": {
+            "name": "resources",
+            "abr": "reso",
+            "max": 5,
+            "value": 3
+        },
+        "followers": {
+            "name": "followers",
+            "abr": "fllw",
+            "max": 5,
+            "value": 1
+        }
     }
 }

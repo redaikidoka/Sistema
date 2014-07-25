@@ -10,22 +10,20 @@
 					<!-- CHARACTER HEADER : Should we use a <header>? -->
 					<div class="col-xs-6 col-sm-3 placeholders text-center">
 						<img src="./img/caste/zenith-fancy.jpg" class="img-responsive center-block " alt="Zenith">
-						<h4 class="text-uppercase text-center "> Zenith</h4>
-						<span class="text-muted text-center ">Blazing Solar Noon</span>
+						<h4 class="text-uppercase text-center "> {{character.caste }} </h4>
+						<span class="text-muted text-center ">{{ character.anima }} </span>
 					</div>
 					<div class="col-xs-6 col-sm-9 ">
-						<h2>Spectaculon the Spectacular</h2>
+						<h2>{{ character.name }} </h2>
 						<dl class="dl-horizontal">
 							<dt>Concept</dt>
-							<dd>An Amazing Orator and General Studmuffin</dd>
+							<dd>{{ character.concept }}</dd>
 							<dt>Motivation</dt>
-							<dd>Grew up Sickly, needs to prove himself</dd>
+							<dd>{{ character.motivation }}</dd>
 							<dt>Anima Banner</dt>
-							<dd>A glorious, blazing pillar of light like a column of gold in a man's shape</dd>
+							<dd>{{ character.anima_banner}}</dd>
 						</dl>
-
 					</div>
-
 				</div>
 
 				<div class="row "> <!-- Display row -->
@@ -37,8 +35,8 @@
 						<div class="col-md-4 col-sm-4"> <!-- Physical Attribute List column -->
 							<ul class="list-group">
 								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									<i>Strength</i>
+									<span class="badge"><span class="glyphicon glyphicon-certificate" ng-repeat="i in  getNumber(character.attributes.strength.value) track by $index"></span><span class="glyphicon glyphicon-certificate mote-empty" ng-repeat="i in  getNumber(character.attributes.strength.max - character.attributes.strength.value) track by $index"></span></span>
+									<span class="stat">{{ character.attributes.strength.name  }}  </span>
 								</li>
 								<li class="list-group-item">
 									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
