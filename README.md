@@ -32,3 +32,12 @@ Brackets.io
 
 ## open-source icons:
 http://thenounproject.com/
+
+### removed from index.html
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+
+	<!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->

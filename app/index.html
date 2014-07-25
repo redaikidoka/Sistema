@@ -5,31 +5,23 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Sistema - Spectaculon</title>
-	<meta name="description" content="">
+	<meta name="description" content="Exalted Character Awesomeness">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Pol Stafford, John Schiavone">
-	<meta name="attributions" content="Sunicon=">
+	<meta name="attributions" content="Iconset=">
 	<!-- <link rel="icon" href="../../favicon.ico"> -->
+	
 	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
 	<!-- Sistema Styles -->
 	<link href="css/sistema.css" rel="stylesheet">
 
-
-	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-	<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	<!-- <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script> -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
 </head>
 
 <body>
@@ -45,7 +37,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-certificate "></span> <abbr title="played by Player J Awesome">Spectaculon the Spectacular</abbr></a>
+				<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-certificate "></span> <abbr title="played by Player J Awesome">{{character.name}}</abbr></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -63,339 +55,17 @@
 		</div>
 		<aside class="panel panel-default">
 			<div class="panel-body navigator     ">
-				<span class="glyphicon glyphicon-chevron-left navicon"></span>  <a href="#attributes">Attributes</a>  <a href="#abilities">Abilities</a>  <a href="#">Backgrounds</a>  <a href="#">Virtues+</a>  <a href="#">Equipment</a>  <a href="#">History</a>
+				<span class="glyphicon glyphicon-chevron-left navicon"></span>  <a href="#attributes">Attributes</a>  <a href="#abilities">Abilities</a>  <a href="#">Backgrounds</a>  <a href="#">Virtues+</a>  <a href="#">Equipment</a>  <a href="#">History</a> <span ng-show="happy">I am happy</span>
 			</div>
 		</aside>
 	</header>
 
-	<section class="container-fluid">
-		<div class="row">
-
-			<div class="main">
-				<!-- CHARACTER SHEET AREA -->
-
-				<div class="row ">
-					<!-- CHARACTER HEADER : Should we use a <header>? -->
-					<div class="col-xs-6 col-sm-3 placeholders text-center">
-						<img src="./img/caste/zenith-fancy.jpg" class="img-responsive center-block " alt="Zenith">
-						<h4 class="text-uppercase text-center "> Zenith</h4>
-						<span class="text-muted text-center ">Blazing Solar Noon</span>
-					</div>
-					<div class="col-xs-6 col-sm-9 ">
-						<h2>Spectaculon the Spectacular</h2>
-						<dl class="dl-horizontal">
-							<dt>Concept</dt>
-							<dd>An Amazing Orator and General Studmuffin</dd>
-							<dt>Motivation</dt>
-							<dd>Grew up Sickly, needs to prove himself</dd>
-							<dt>Anima Banner</dt>
-							<dd>A glorious, blazing pillar of light like a column of gold in a man's shape</dd>
-						</dl>
-
-					</div>
-
-				</div>
-
-				<div class="row "> <!-- Display row -->
-				<article class="panel panel-default"> <!-- Attributes panel -->
-					<div class="panel-heading">
-						<h2 class="panel-title small-caps"> <span class="glyphicon glyphicon-chevron-down"></span> <a name="attributes"></a>Attributes </h2> 
-					</div>
-					<div class="panel-body"> <!-- Attribute Panel Body -->
-						<div class="col-md-4 col-sm-4"> <!-- Physical Attribute List column -->
-							<ul class="list-group">
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									<i>Strength</i>
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									<i>Dexterity</i>
-
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									<span class="stat">Stamina</span>
-								</li>
-							</ul>
-
-						</div> <!-- Physical Attribute List column-->
-
-						<div class="col-md-4 col-sm-4"> <!-- Social Attribute List column-->
-							<ul class="list-group">
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									Charisma
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									Manipulation
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span></span>
-									Appearance
-								</li>
-							</ul>
-						</div> <!-- Social Attribute List column-->
-
-						<div class="col-md-4 col-sm-4"> <!-- Mental Attribute List column-->
-							<ul class="list-group">
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									<span class="stat">PERCEPTION</span>
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									INTELLIGENCE
-
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									WITS
-								</li>
-							</ul>
-						</div> <!-- Mental Attribute List column-->
-
-					</div><!-- Attribute Panel Body -->
-			</article> <!-- Attributes panel -->
-		</div> <!-- Display row -->
-
-
-
-			<article class="panel panel-default">
-				<div class="panel-heading">
-					<h2 class="panel-title text-uppercase"> <a name="abilities"> <span class="glyphicon glyphicon-chevron-down"></span></a> Abilities </h2> 
-				</div>
-				<div class="panel-body">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-3 col-sm-6">
-								<h3>Dawn</h3>
-								<ul class="list-group ability">
-									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate solar"></span></span>
-										<span class="favored">Archery</span> 	<a href="#" alt="1st Archery Excellency" title="1st Archery Excellency" class="excellency">&nbsp;1&nbsp;</a>
-									</li>
-									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-										<span class="favored"> Martial Arts</span> 
-										<br/><i>&nbsp;&nbsp;<small>Embarrasing</small></i><span class="glyphicon glyphicon-certificate solar" style="float:right;"></span><span class="glyphicon glyphicon-certificate solar" style="float:right;"></span>
-									</li>
-									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-										Melee
-									</li>
-									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-										Thrown
-									</li>
-									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-										War
-									</li>
-
-								</ul>
-
-							</div>
-							<div class="col-md-4">
-								<h3>Zenith</h3>
-								<dl class="dl-horizontal">
-									<dt><i>Integrity</i>  </dt>
-									<dd>
-										<span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span>
-									</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Performance </dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Presence</dt>
-									<dd>OOOOO</dd>
-									<dt>
-                                    Resistance</dt>
-									<dd>OOOOO</dd>
-									<dt>
-                                    Survival</dt>
-									<dd>OOOOO</dd>
-								</dl>
-							</div>
-							<div class="col-md-4">
-								<h3>Twilight</h3>
-								<dl class="dl-horizontal">
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Craft  </dt>
-									<dd>
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-									</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Investigation </dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Lore</dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Medicine</dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Occult</dt>
-									<dd>OOOOO</dd>
-								</dl>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-4">
-								<h3>Night</h3>
-								<dl class="dl-horizontal">
-									<dt>Athletics  </dt>
-									<dd>
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-									</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Awareness</dt>
-									<dd>
-										<img class="mote" src="img/bullets/sun_zenith.svg">
-										<img class="mote" src="img/bullets/sun_zenith.svg">
-										<img class="mote" src="img/bullets/sun_zenith.svg">
-									</dd>
-									<dt>Dodge</dt>
-									<dd>OOOOO</dd>
-									<dt>Larceny</dt>
-									<dd>OOOOO</dd>
-									<dt>Stealth</dt>
-									<dd>OOOOO</dd>
-								</dl>
-							</div>
-							<div class="col-md-4">
-								<h3>Eclipse</h3>
-								<dl class="dl-horizontal">
-									<dt>
-                                    Bureacracy  </dt>
-									<dd>
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-									</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Linguistics </dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Ride</dt>
-									<dd>OOOOO</dd>
-									<dt>
-                                    Sail</dt>
-									<dd>OOOOO</dd>
-									<dt>
-                                    Socialize</dt>
-									<dd>OOOOO</dd>
-								</dl>
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</article>
-
-			<article class="panel panel-default">
-				<div class="panel-heading">
-					<h2 class="panel-title text-uppercase"> <span class="glyphicon glyphicon-chevron-down"></span> Advantages </h2> 
-				</div>
-				<div class="panel-body">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-3">
-								<h3>Backgrounds</h3>
-								<ul class="list-group">
-									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate solar"></span><span class="glyphicon glyphicon-certificate solar"></span></span>
-										<b> Artifact</b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-record solar"></span><span class="glyphicon glyphicon-record solar"></span><span class="glyphicon glyphicon-record solar"></span></span>
-										<b> <a href="#" title="Add successes">Backing</a> </b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span></span>
-										<b> <a href="#" title="Add successes">Manse</a> </b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span></span>
-										<b> <a href="#" title="Add successes">Resources</a> </b>
-									</li>
-								</ul>
-
-							</div>
-							
-							<div class="col-md-5">
-								<h3>4 Charms</h3>
-								<ul class="list-group">
-									<li class="list-group-item">
-										<span class="badge">2<span class="glyphicon glyphicon-certificate solar"></span></span>
-										<b> <a href="#" title="Dodge: xxxxxxxxx">Shadow Over Water</a></b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">2 <span class="glyphicon glyphicon-repeat solar"></span></span>
-										<b> <a href="#" title="Add successes">2nd Dodge Excellency</a> </b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">1<span class="glyphicon glyphicon-certificate solar"></span> </span>
-										<b> <a href="#" title="Add successes">Mastery of Small Manners</a> </b>
-									</li>									<li class="list-group-item">
-										<span class="badge">3<span class="glyphicon glyphicon-certificate solar"></span> 1<span class=" solar">WP</span></span>
-										<b> <a href="#" title="Add successes">Wise-Eyed Courtier Method</a> </b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">4<span class="glyphicon glyphicon-certificate solar"></span> </span>
-										<b> <a href="#" title="Add successes">3rd Socialize Excellency (R)</a> </b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">10<span class="glyphicon glyphicon-certificate solar"></span> 1<span class=" solar">WP</span></span>
-										<b> <a href="#" title="Add successes">Venomous Whipsers</a> </b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">3<span class="glyphicon glyphicon-certificate solar"></span> 1<span class=" solar">WP</span></span>
-										<b> <a href="#" title="Add successes">Wild Revelry Approach</a> </b>
-									</li>
-								</ul>
-							
-							</div>
-
-
-							<div class="col-md-4">
-								<h3>Charms</h3>
-								<ul class="list-group">
-								  <li class="list-group-item">
-										<span class="badge">2<span class="glyphicon glyphicon-certificate solar"></span></span>
-										<b> <a href="#" title="Dodge: xxxxxxxxx">Shadow Over Water</a></b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">2 <span class="glyphicon glyphicon-repeat solar"></span></span>
-										<b> <a href="#" title="Add successes">2nd Dodge Excellency</a> </b>
-									</li>
-
-								</ul>
-
-							</div>
-						</div>
-						<!-- row -->
-					</div>
-					<!-- container-fluid -->
-				</div>
-				<!-- panel-body -->
-			</article>
-						</div>
-		</div>
-
-	</section>
+	  <div ng-view></div>
+	
 
 	<footer class="footer well ">Exalty Awesomeness; not sure what the footer is for.</footer>
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 
-	<!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-route/angular-route.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/services.js"></script>
-	<script src="js/controllers.js"></script>
-	<script src="js/filters.js"></script>
-	<script src="js/directives.js"></script>
+
 </body>
 
 </html>
