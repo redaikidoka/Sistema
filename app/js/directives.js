@@ -5,14 +5,42 @@
 
 var sistemaDirectives = angular.module('sistemaDirectives', []);
 
+
 sistemaDirectives.directive('saMotes', function() {
 	  return {
     restrict: 'A',
-    require: '^ngModel',
 		scope: {
-			ngStat: '@'
+			moteCount: '=',
+			max: '='
 		},
-    template: '<span class="badge"><span class="glyphicon glyphicon-certificate" ng-repeat="i in  getNumber(character.attributes.strength.value) track by $index"></span><span class="glyphicon glyphicon-certificate mote-empty" ng-repeat="i in  getNumber(character.attributes.strength.max - character.attributes.strength.value) track by $index"></span></span>'
+    template: '<span ng-repeat="mote in motes" class="glyphicon glyphicon-certificate" ng-class="{\'mote-empty\':$index>moteCount+1}"> </span>',
+
+		link: function(scope, elem, attrs, ctrl ) {
+			scope.motes = []; 
+			for (var i = 0; i< scope.max; i++) {
+				scope.motes.push({filled: i < scope.moteCount});
+			}
+			
+
+		}
+}});
+
+
+sistemaDirectives.directive('fundooRating', function () {
+    return {
+      restrict: 'A',
+      template:  '<span ng-repeat="star in stars" class="filled">' +
+                      '\u2605' +
+                  '</span>',
+      scope: {
+        ratingValue: '='
+      },
+      link: function (scope, elem, attrs) {
+        scope.stars = [];
+        for (var i = 0; i < scope.ratingValue; i++) {
+          scope.stars.push({});
+        }
+      }
   }
 });
 

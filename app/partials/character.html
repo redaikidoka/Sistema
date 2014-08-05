@@ -1,5 +1,4 @@
 
-
 	<section class="container-fluid">
 		<div class="row">
 
@@ -39,12 +38,12 @@
 									<span class="stat">{{ character.attributes.strength.name  }}  </span>
 								</li>
 								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									<i>Dexterity</i>
+									<span class="badge"> <span sa-motes mote-count="3" max="5"></span> </span>
+									<span class="stat">{{ character.attributes.dexterity.name  }} {{character.attributes.dexterity.value }} </span>
 
 								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
+								<li class="list-group-item" >
+									<span class="badge"><span sa-motes ng-attr-mote-count="{{character.attributes.stamina.value}}" max="5"></span> </span></span>
 									<span class="stat">Stamina</span>
 								</li>
 							</ul>
@@ -304,7 +303,7 @@
 				</div>
 				<!-- panel-body -->
 			</article>
-						</div>
+		</div>
 		</div>
 
 	</section>

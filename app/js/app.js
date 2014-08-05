@@ -5,7 +5,8 @@
 var sistemaApp = angular.module('sistemaApp', [
 	'ngRoute',
 	'sistemaControllers',
-	'sistemaFilters'
+	'sistemaFilters',
+	'sistemaDirectives'
 ]);
 	
 sistemaApp.config(['$routeProvider', 
