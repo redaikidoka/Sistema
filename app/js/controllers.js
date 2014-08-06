@@ -6,8 +6,9 @@ var sistemaControllers = angular.module('sistemaControllers', []);
 
 sistemaControllers.controller('CharacterCtrl', ['$scope', '$http',
 	function($scope, $http) {
-		$http.get('characters/ash.json').success(function(data) {
+		$http.get('characters/ash.json', {cache:false}).success(function(data) {
 			$scope.character = data;
+			
 		});
 		
 		$scope.happy = true;

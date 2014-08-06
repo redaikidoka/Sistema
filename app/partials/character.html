@@ -38,12 +38,12 @@
 									<span class="stat">{{ character.attributes.strength.name  }}  </span>
 								</li>
 								<li class="list-group-item">
-									<span class="badge"> <span sa-motes mote-count="3" max="5"></span> </span>
-									<span class="stat">{{ character.attributes.dexterity.name  }} {{character.attributes.dexterity.value }} </span>
+									<span class="badge"> <span sa-motes mote-count="character.attributes.dexterity.value" mote-max="5" stat-name="dex"></span> </span>
+									<span class="stat">{{ character.attributes.dexterity.name  }} {{character.attributes.dexterity.value }} / {{ character.attributes.max }}</span>
 
 								</li>
 								<li class="list-group-item" >
-									<span class="badge"><span sa-motes ng-attr-mote-count="{{character.attributes.stamina.value}}" max="5"></span> </span></span>
+									<span class="badge"><span sa-motes mote-count="character.attributes.stamina.value" mote-max="character.attributes.max" stat-name="character.attributes.stamina.name"></span> </span>
 									<span class="stat">Stamina</span>
 								</li>
 							</ul>
