@@ -118,7 +118,7 @@ span.mote-empty {
 
 
 .favored {
-	font-style:italic;
+	/* font-style:italic; */
 	font-weight: bold;
 }
 
@@ -132,7 +132,16 @@ span.mote-empty {
 .stat {
 	font-variant: normal;
 	text-transform: capitalize;
-	font-style: normal;
-	
+	font-style: normal;	
 }
 
+.ability {
+  text-transform: capitalize;
+
+}
+
+.specialty {
+  font-size: small;
+  font-style: italic;
+
+}

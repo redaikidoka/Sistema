@@ -1,99 +1,86 @@
-
-	<section class="container-fluid">
-		<div class="row">
-
-			<div class="main">
-				<!-- CHARACTER SHEET AREA -->
-
-				<div class="row ">
-					<!-- CHARACTER HEADER : Should we use a <header>? -->
-					<div class="col-xs-6 col-sm-3 placeholders text-center">
-						<img src="./img/caste/zenith-fancy.jpg" class="img-responsive center-block " alt="Zenith">
-						<h4 class="text-uppercase text-center "> {{character.caste }} </h4>
-						<span class="text-muted text-center ">{{ character.anima }} </span>
-					</div>
-					<div class="col-xs-6 col-sm-9 ">
-						<h2>{{ character.name }} </h2>
-						<dl class="dl-horizontal">
-							<dt>Concept</dt>
-							<dd>{{ character.concept }}</dd>
-							<dt>Motivation</dt>
-							<dd>{{ character.motivation }}</dd>
-							<dt>Anima Banner</dt>
-							<dd>{{ character.anima_banner}}</dd>
-						</dl>
-					</div>
+<section class="container-fluid">
+	<div class="row">
+		<div class="main">
+			<!-- CHARACTER SHEET AREA -->
+			<div class="row ">
+				<!-- CHARACTER HEADER : Should we use a <header>? -->
+				<div class="col-xs-6 col-sm-3 placeholders text-center">
+					<img src="./img/caste/zenith-fancy.jpg" class="img-responsive center-block " alt="Zenith">
+					<h4 class="text-uppercase text-center "> {{character.caste }} </h4>
+					<span class="text-muted text-center ">{{ character.anima }} </span>
 				</div>
-
-				<div class="row "> <!-- Display row -->
-				<article class="panel panel-default"> <!-- Attributes panel -->
-					<div class="panel-heading">
-						<h2 class="panel-title small-caps"> <span class="glyphicon glyphicon-chevron-down"></span> <a name="attributes"></a>Attributes </h2> 
-					</div>
-					<div class="panel-body"> <!-- Attribute Panel Body -->
-						<div class="col-md-4 col-sm-4"> <!-- Physical Attribute List column -->
-							<ul class="list-group">
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate" ng-repeat="i in  getNumber(character.attributes.strength.value) track by $index"></span><span class="glyphicon glyphicon-certificate mote-empty" ng-repeat="i in  getNumber(character.attributes.strength.max - character.attributes.strength.value) track by $index"></span></span>
-									<span class="stat">{{ character.attributes.strength.name  }}  </span>
-								</li>
-								<li class="list-group-item">
-									<span class="badge"> <span sa-motes mote-count="character.attributes.dexterity.value" mote-max="5" stat-name="dex"></span> </span>
-									<span class="stat">{{ character.attributes.dexterity.name  }} {{character.attributes.dexterity.value }} / {{ character.attributes.max }}</span>
-
-								</li>
-								<li class="list-group-item" >
-									<span class="badge"><span sa-motes mote-count="character.attributes.stamina.value" mote-max="character.attributes.max" stat-name="character.attributes.stamina.name"></span> </span>
-									<span class="stat">Stamina</span>
-								</li>
-							</ul>
-
-						</div> <!-- Physical Attribute List column-->
-
-						<div class="col-md-4 col-sm-4"> <!-- Social Attribute List column-->
-							<ul class="list-group">
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									Charisma
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									Manipulation
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span></span>
-									Appearance
-								</li>
-							</ul>
-						</div> <!-- Social Attribute List column-->
-
-						<div class="col-md-4 col-sm-4"> <!-- Mental Attribute List column-->
-							<ul class="list-group">
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									<span class="stat">PERCEPTION</span>
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									INTELLIGENCE
-
-								</li>
-								<li class="list-group-item">
-									<span class="badge"><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-									WITS
-								</li>
-							</ul>
-						</div> <!-- Mental Attribute List column-->
-
-					</div><!-- Attribute Panel Body -->
+				<div class="col-xs-6 col-sm-9 ">
+					<h2>{{ character.name }} </h2>
+					<dl class="dl-horizontal">
+						<dt>Concept</dt>
+						<dd>{{ character.concept }}</dd>
+						<dt>Motivation</dt>
+						<dd>{{ character.motivation }}</dd>
+						<dt>Anima Banner</dt>
+						<dd>{{ character.anima_banner}}</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="row "> <!-- Display row -->
+			<article class="panel panel-default"> <!-- Attributes panel -->
+			<div class="panel-heading">
+				<h2 class="panel-title small-caps"> <span class="glyphicon glyphicon-chevron-down"></span> <a name="attributes"></a>Attributes </h2>
+			</div>
+			<div class="panel-body"> <!-- Attribute Panel Body -->
+			<div class="col-md-4 col-sm-4"> <!-- Physical Attribute List column -->
+			<ul class="list-group">
+				<li class="list-group-item">
+					<span class="badge"> <span sa-motes mote-count="character.attributes.strength.value" mote-max="character.attributes.max" stat-name="str"></span> </span>
+					<span class="stat">{{ character.attributes.strength.name }}  </span>
+				</li>
+				<li class="list-group-item">
+					<span class="badge"> <span sa-motes mote-count="character.attributes.dexterity.value" mote-max="5" stat-name="dex"></span> </span>
+					<span class="stat">{{ character.attributes.dexterity.name }} </span>
+				</li>
+				<li class="list-group-item" >
+					<span class="badge"><span sa-motes mote-count="character.attributes.stamina.value" mote-max="character.attributes.max" stat-name={{character.attributes.stamina.name}}></span> </span>
+					<span class="stat">{{ character.attributes.stamina.name }}</span>
+				</li>
+			</ul>
+			</div> <!-- /Physical Attribute List column-->
+			<div class="col-md-4 col-sm-4"> <!-- Social Attribute List column-->
+			<ul class="list-group">
+				<li class="list-group-item" >
+					<span class="badge"><span sa-motes mote-count="character.attributes.charisma.value" mote-max="character.attributes.max" stat-name="{{character.attributes.charisma.name}}"></span> </span>
+					<span class="stat">{{ character.attributes.charisma.name }}</span>
+				</li>
+				<li class="list-group-item" >
+					<span class="badge"><span sa-motes mote-count="character.attributes.manipulation.value" mote-max="character.attributes.max" stat-name="{{character.attributes.manipulation.name}}"></span> </span>
+					<span class="stat">{{ character.attributes.manipulation.name }}</span>
+				</li>
+				<li class="list-group-item" >
+					<span class="badge"><span sa-motes mote-count="character.attributes.appearance.value" mote-max="character.attributes.max" stat-name="{{character.attributes.appearance.name}}"></span> </span>
+					<span class="stat">{{ character.attributes.appearance.name }}</span>
+				</li>
+			</ul>
+			</div> <!-- /Social Attribute List column-->
+			<div class="col-md-4 col-sm-4"> <!-- Mental Attribute List column-->
+			<ul class="list-group">
+				<li class="list-group-item" >
+					<span class="badge"><span sa-motes mote-count="character.attributes.perception.value" mote-max="character.attributes.max" stat-name={{character.attributes.perception.name}}></span> </span>
+					<span class="stat">{{ character.attributes.perception.name }}</span>
+				</li>
+				<li class="list-group-item" >
+					<span class="badge"><span sa-motes mote-count="character.attributes.intelligence.value" mote-max="character.attributes.max" stat-name={{character.attributes.intelligence.name}}></span> </span>
+					<span class="stat">{{ character.attributes.intelligence.name }}</span>
+				</li>
+				<li class="list-group-item" >
+					<span class="badge"><span sa-motes mote-count="character.attributes.wits.value" mote-max="character.attributes.max" stat-name={{character.attributes.wits.name}}></span> </span>
+					<span class="stat">{{ character.attributes.wits.name }}</span>
+				</li>
+			</ul>
+			</div> <!-- Mental Attribute List column-->
+			</div><!-- Attribute Panel Body -->
 			</article> <!-- Attributes panel -->
-		</div> <!-- Display row -->
-
-
-
+			</div> <!-- Display row -->
 			<article class="panel panel-default">
 				<div class="panel-heading">
-					<h2 class="panel-title text-uppercase"> <a name="abilities"> <span class="glyphicon glyphicon-chevron-down"></span></a> Abilities </h2> 
+					<h2 class="panel-title text-uppercase"> <a name="abilities"> <span class="glyphicon glyphicon-chevron-down"></span></a> Abilities </h2>
 				</div>
 				<div class="panel-body">
 					<div class="container-fluid">
@@ -102,123 +89,138 @@
 								<h3>Dawn</h3>
 								<ul class="list-group ability">
 									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate solar"></span></span>
-										<span class="favored">Archery</span> 	<a href="#" alt="1st Archery Excellency" title="1st Archery Excellency" class="excellency">&nbsp;1&nbsp;</a>
+										<span class="badge"><span sa-motes mote-count="character.abilities.archery.value" mote-max="character.abilities.archery.max" stat-name={{character.abilities.archery.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.archery.favored}} == true }"> {{character.abilities.archery.name}} </span> 	<a href="#" alt="1st Archery Excellency" title="1st Archery Excellency" class="excellency">&nbsp;1&nbsp;</a>
+										<span ng-repeat="specialty in character.abilities.archery.specialties"> <br> <span class="specialty">{{specialty.name}}</span><span class="solar pull-right" sa-motes mote-count="specialty.value" mote-max="specialty.value" stat-name={{specialty.name}}></span> 
+									</span>
 									</li>
 									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-										<span class="favored"> Martial Arts</span> 
-										<br/><i>&nbsp;&nbsp;<small>Embarrasing</small></i><span class="glyphicon glyphicon-certificate solar" style="float:right;"></span><span class="glyphicon glyphicon-certificate solar" style="float:right;"></span>
+										<span class="badge"><span sa-motes mote-count="character.abilities.martial_arts.value" mote-max="character.abilities.martial_arts.max" stat-name={{character.abilities.martial_arts.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.martial_arts.favored}} == true }"> {{character.abilities.martial_arts.name}} </span>
 									</li>
 									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-										Melee
+										<span class="badge"><span sa-motes mote-count="character.abilities.melee.value" mote-max="character.abilities.melee.max" stat-name={{character.abilities.melee.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.melee.favored}} == true }"> {{character.abilities.melee.name}} </span>
 									</li>
 									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-										Thrown
+										<span class="badge"><span sa-motes mote-count="character.abilities.thrown.value" mote-max="character.abilities.thrown.max" stat-name={{character.abilities.thrown.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.thrown.favored}} == true }"> {{character.abilities.thrown.name}} </span>
 									</li>
 									<li class="list-group-item">
-										<span class="badge"><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span></span>
-										War
+										<span class="badge"><span sa-motes mote-count="character.abilities.war.value" mote-max="character.abilities.war.max" stat-name={{character.abilities.war.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.war.favored}} == true }"> {{character.abilities.war.name}} </span>
 									</li>
 
 								</ul>
-
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-3 col-sm-6">
 								<h3>Zenith</h3>
-								<dl class="dl-horizontal">
-									<dt><i>Integrity</i>  </dt>
-									<dd>
-										<span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate "></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span><span class="glyphicon glyphicon-certificate mote-empty"></span>
-									</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Performance </dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Presence</dt>
-									<dd>OOOOO</dd>
-									<dt>
-                                    Resistance</dt>
-									<dd>OOOOO</dd>
-									<dt>
-                                    Survival</dt>
-									<dd>OOOOO</dd>
-								</dl>
+								<ul class="list-group ability">
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.integrity.value" mote-max="character.abilities.integrity.max" stat-name={{character.abilities.integrity.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.integrity.favored}} == true }"> {{character.abilities.integrity.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.performance.value" mote-max="character.abilities.performance.max" stat-name={{character.abilities.performance.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.performance.favored}} == true }"> {{character.abilities.performance.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.presence.value" mote-max="character.abilities.presence.max" stat-name={{character.abilities.presence.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.presence.favored}} == true }"> {{character.abilities.presence.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.resistance.value" mote-max="character.abilities.resistance.max" stat-name={{character.abilities.resistance.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.resistance.favored}} == true }"> {{character.abilities.resistance.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.survival.value" mote-max="character.abilities.survival.max" stat-name={{character.abilities.survival.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.survival.favored}} == true }"> {{character.abilities.survival.name}} </span>
+									</li>
+								</ul>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-3 col-sm-6">
 								<h3>Twilight</h3>
-								<dl class="dl-horizontal">
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Craft  </dt>
-									<dd>
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-									</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Investigation </dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Lore</dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Medicine</dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Occult</dt>
-									<dd>OOOOO</dd>
-								</dl>
+								<ul class="list-group ability">
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.craft.value" mote-max="character.abilities.craft.max" stat-name={{character.abilities.craft.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.craft.favored}} == true }"> {{character.abilities.craft.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.investigation.value" mote-max="character.abilities.investigation.max" stat-name={{character.abilities.investigation.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.investigation.favored}} == true }"> {{character.abilities.investigation.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.lore.value" mote-max="character.abilities.lore.max" stat-name={{character.abilities.lore.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.lore.favored}} == true }"> {{character.abilities.lore.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.medicine.value" mote-max="character.abilities.medicine.max" stat-name={{character.abilities.medicine.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.medicine.favored}} == true }"> {{character.abilities.medicine.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.occult.value" mote-max="character.abilities.occult.max" stat-name={{character.abilities.occult.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.occult.favored}} == true }"> {{character.abilities.occult.name}} </span>
+									</li>
+								</ul>
 							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-4">
+						
+							<div class="col-md-3 col-sm-6">
 								<h3>Night</h3>
-								<dl class="dl-horizontal">
-									<dt>Athletics  </dt>
-									<dd>
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-									</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Awareness</dt>
-									<dd>
-										<img class="mote" src="img/bullets/sun_zenith.svg">
-										<img class="mote" src="img/bullets/sun_zenith.svg">
-										<img class="mote" src="img/bullets/sun_zenith.svg">
-									</dd>
-									<dt>Dodge</dt>
-									<dd>OOOOO</dd>
-									<dt>Larceny</dt>
-									<dd>OOOOO</dd>
-									<dt>Stealth</dt>
-									<dd>OOOOO</dd>
-								</dl>
+								<ul class="list-group ability">
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.athletics.value" mote-max="character.abilities.athletics.max" stat-name={{character.abilities.athletics.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.athletics.favored}} == true }"> {{character.abilities.athletics.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.awareness.value" mote-max="character.abilities.awareness.max" stat-name={{character.abilities.awareness.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.awareness.favored}} == true }"> {{character.abilities.awareness.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.dodge.value" mote-max="character.abilities.dodge.max" stat-name={{character.abilities.dodge.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.dodge.favored}} == true }"> {{character.abilities.dodge.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.larceny.value" mote-max="character.abilities.larceny.max" stat-name={{character.abilities.larceny.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.larceny.favored}} == true }"> {{character.abilities.larceny.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.stealth.value" mote-max="character.abilities.stealth.max" stat-name={{character.abilities.stealth.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.stealth.favored}} == true }"> {{character.abilities.stealth.name}} </span>
+									</li>
+								</ul>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-3 col-sm-6">
 								<h3>Eclipse</h3>
-								<dl class="dl-horizontal">
-									<dt>
-                                    Bureacracy  </dt>
-									<dd>
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-										<img class="mote" src="img/bullets/sun_ray_full.svg">
-									</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Linguistics </dt>
-									<dd>OOOOO</dd>
-									<dt><span class="glyphicon glyphicon-cog mote-solar"></span>Ride</dt>
-									<dd>OOOOO</dd>
-									<dt>
-                                    Sail</dt>
-									<dd>OOOOO</dd>
-									<dt>
-                                    Socialize</dt>
-									<dd>OOOOO</dd>
-								</dl>
+								<ul class="list-group ability">
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.bureaucracy.value" mote-max="character.abilities.bureaucracy.max" stat-name={{character.abilities.bureaucracy.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.bureaucracy.favored}} == true }"> {{character.abilities.bureaucracy.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.linguistics.value" mote-max="character.abilities.linguistics.max" stat-name={{character.abilities.linguistics.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.linguistics.favored}} == true }"> {{character.abilities.linguistics.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.ride.value" mote-max="character.abilities.ride.max" stat-name={{character.abilities.ride.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.ride.favored}} == true }"> {{character.abilities.ride.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.sail.value" mote-max="character.abilities.sail.max" stat-name={{character.abilities.sail.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.sail.favored}} == true }"> {{character.abilities.sail.name}} </span>
+									</li>
+									<li class="list-group-item">
+										<span class="badge"><span sa-motes mote-count="character.abilities.socialize.value" mote-max="character.abilities.socialize.max" stat-name={{character.abilities.socialize.name}}></span> </span>
+										<span class="ability" ng-class="{'favored' : {{character.abilities.socialize.favored}} == true }"> {{character.abilities.socialize.name}} </span>
+									</li>
+								</ul>
 							</div>
-
 						</div>
-
 					</div>
 				</div>
 			</article>
-
 			<article class="panel panel-default">
 				<div class="panel-heading">
-					<h2 class="panel-title text-uppercase"> <span class="glyphicon glyphicon-chevron-down"></span> Advantages </h2> 
+					<h2 class="panel-title text-uppercase"> <span class="glyphicon glyphicon-chevron-down"></span> Advantages </h2>
 				</div>
 				<div class="panel-body">
 					<div class="container-fluid">
@@ -243,7 +245,6 @@
 										<b> <a href="#" title="Add successes">Resources</a> </b>
 									</li>
 								</ul>
-
 							</div>
 							
 							<div class="col-md-5">
@@ -261,49 +262,44 @@
 										<span class="badge">1<span class="glyphicon glyphicon-certificate solar"></span> </span>
 										<b> <a href="#" title="Add successes">Mastery of Small Manners</a> </b>
 									</li>									<li class="list-group-item">
-										<span class="badge">3<span class="glyphicon glyphicon-certificate solar"></span> 1<span class=" solar">WP</span></span>
-										<b> <a href="#" title="Add successes">Wise-Eyed Courtier Method</a> </b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">4<span class="glyphicon glyphicon-certificate solar"></span> </span>
-										<b> <a href="#" title="Add successes">3rd Socialize Excellency (R)</a> </b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">10<span class="glyphicon glyphicon-certificate solar"></span> 1<span class=" solar">WP</span></span>
-										<b> <a href="#" title="Add successes">Venomous Whipsers</a> </b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">3<span class="glyphicon glyphicon-certificate solar"></span> 1<span class=" solar">WP</span></span>
-										<b> <a href="#" title="Add successes">Wild Revelry Approach</a> </b>
-									</li>
-								</ul>
+									<span class="badge">3<span class="glyphicon glyphicon-certificate solar"></span> 1<span class=" solar">WP</span></span>
+									<b> <a href="#" title="Add successes">Wise-Eyed Courtier Method</a> </b>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">4<span class="glyphicon glyphicon-certificate solar"></span> </span>
+									<b> <a href="#" title="Add successes">3rd Socialize Excellency (R)</a> </b>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">10<span class="glyphicon glyphicon-certificate solar"></span> 1<span class=" solar">WP</span></span>
+									<b> <a href="#" title="Add successes">Venomous Whipsers</a> </b>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">3<span class="glyphicon glyphicon-certificate solar"></span> 1<span class=" solar">WP</span></span>
+									<b> <a href="#" title="Add successes">Wild Revelry Approach</a> </b>
+								</li>
+							</ul>
 							
-							</div>
-
-
-							<div class="col-md-4">
-								<h3>Charms</h3>
-								<ul class="list-group">
-								  <li class="list-group-item">
-										<span class="badge">2<span class="glyphicon glyphicon-certificate solar"></span></span>
-										<b> <a href="#" title="Dodge: xxxxxxxxx">Shadow Over Water</a></b>
-									</li>
-									<li class="list-group-item">
-										<span class="badge">2 <span class="glyphicon glyphicon-repeat solar"></span></span>
-										<b> <a href="#" title="Add successes">2nd Dodge Excellency</a> </b>
-									</li>
-
-								</ul>
-
-							</div>
 						</div>
-						<!-- row -->
+						<div class="col-md-4">
+							<h3>Charms</h3>
+							<ul class="list-group">
+								<li class="list-group-item">
+									<span class="badge">2<span class="glyphicon glyphicon-certificate solar"></span></span>
+									<b> <a href="#" title="Dodge: xxxxxxxxx">Shadow Over Water</a></b>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">2 <span class="glyphicon glyphicon-repeat solar"></span></span>
+									<b> <a href="#" title="Add successes">2nd Dodge Excellency</a> </b>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<!-- container-fluid -->
+					<!-- row -->
 				</div>
-				<!-- panel-body -->
-			</article>
-		</div>
-		</div>
-
-	</section>
+				<!-- container-fluid -->
+			</div>
+			<!-- panel-body -->
+		</article>
+	</div>
+</div>
+</section>
