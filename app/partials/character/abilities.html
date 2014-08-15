@@ -1,0 +1,225 @@
+<!-- col-lg-2x col-md-3 col-sm-4 -->
+
+<article class="panel panel-default">
+	<header class="panel-heading">
+		<h2 class="panel-title text-uppercase">
+			<a name="abilities">
+				<a data-toggle="collapse" data-target="#abilities" class="glyphicon glyphicon-chevron-down"></a>
+			</a>Abilities</h2>
+	</header>
+	<div id="abilities" class="panel-body collapse in">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-xs-6">
+					<h3>Dawn</h3>
+					<ul class="list-group ability-list">
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.archery.value" mote-max="character.abilities.archery.max">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.archery.favored}} == true }">{{character.abilities.archery.name}}</span> <a href="#" alt="1st Archery Excellency" title="1st Archery Excellency" class="excellency">&nbsp;1&nbsp;</a>
+							<span ng-repeat="specialty in character.abilities.archery.specialties">
+								<br>
+								<span class="specialty">{{specialty.name}}</span>
+								<span class="solar pull-right sepcialty"> <sa-motes mote-count="specialty.value" mote-max="specialty.value"></span>
+							</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.martial_arts.value" mote-max="character.abilities.martial_arts.max" stat-name="character.abilities.martial_arts.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.martial_arts.favored}} == true }">{{character.abilities.martial_arts.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.melee.value" mote-max="character.abilities.melee.max" stat-name="character.abilities.melee.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.melee.favored}} == true }">{{character.abilities.melee.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.thrown.value" mote-max="character.abilities.thrown.max" stat-name="character.abilities.thrown.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.thrown.favored}} == true }">{{character.abilities.thrown.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.war.value" mote-max="character.abilities.war.max" stat-name="character.abilities.war.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.war.favored}} == true }">{{character.abilities.war.name}}</span>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-xs-6">
+					<h3>Zenith</h3>
+					<ul class="list-group ability-list">
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.integrity.value" mote-max="character.abilities.integrity.max" stat-name="character.abilities.integrity.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.integrity.favored}} == true }">{{character.abilities.integrity.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.performance.value" mote-max="character.abilities.performance.max" stat-name="character.abilities.performance.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.performance.favored}} == true }">{{character.abilities.performance.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.presence.value" mote-max="character.abilities.presence.max" stat-name="character.abilities.presence.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.presence.favored}} == true }">{{character.abilities.presence.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.resistance.value" mote-max="character.abilities.resistance.max" stat-name="character.abilities.resistance.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.resistance.favored}} == true }">{{character.abilities.resistance.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.survival.value" mote-max="character.abilities.survival.max" stat-name="character.abilities.survival.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.survival.favored}} == true }">{{character.abilities.survival.name}}</span>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-xs-6">
+					<h3>Twilight</h3>
+					<ul class="list-group ability-list">
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.craft.value" mote-max="character.abilities.craft.max" stat-name="character.abilities.craft.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.craft.favored}} == true }">{{character.abilities.craft.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.investigation.value" mote-max="character.abilities.investigation.max" stat-name="character.abilities.investigation.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.investigation.favored}} == true }">{{character.abilities.investigation.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.lore.value" mote-max="character.abilities.lore.max" stat-name="character.abilities.lore.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.lore.favored}} == true }">{{character.abilities.lore.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.medicine.value" mote-max="character.abilities.medicine.max" stat-name="character.abilities.medicine.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.medicine.favored}} == true }">{{character.abilities.medicine.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.occult.value" mote-max="character.abilities.occult.max" stat-name="character.abilities.occult.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.occult.favored}} == true }">{{character.abilities.occult.name}}</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-lg-2 col-xs-6">
+					<h3>Night</h3>
+					<ul class="list-group ability-list">
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.athletics.value" mote-max="character.abilities.athletics.max" stat-name="character.abilities.athletics.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.athletics.favored}} == true }">{{character.abilities.athletics.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.awareness.value" mote-max="character.abilities.awareness.max" stat-name="character.abilities.awareness.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.awareness.favored}} == true }">{{character.abilities.awareness.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.dodge.value" mote-max="character.abilities.dodge.max" stat-name="character.abilities.dodge.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.dodge.favored}} == true }">{{character.abilities.dodge.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.larceny.value" mote-max="character.abilities.larceny.max" stat-name="character.abilities.larceny.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.larceny.favored}} == true }">{{character.abilities.larceny.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.stealth.value" mote-max="character.abilities.stealth.max" stat-name="character.abilities.stealth.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.stealth.favored}} == true }">{{character.abilities.stealth.name}}</span>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-xs-6">
+					<h3>Eclipse</h3>
+					<ul class="list-group ability-list">
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.bureaucracy.value" mote-max="character.abilities.bureaucracy.max" stat-name="character.abilities.bureaucracy.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.bureaucracy.favored}} == true }">{{character.abilities.bureaucracy.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.linguistics.value" mote-max="character.abilities.linguistics.max" stat-name="character.abilities.linguistics.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.linguistics.favored}} == true }">{{character.abilities.linguistics.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.ride.value" mote-max="character.abilities.ride.max" stat-name="character.abilities.ride.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.ride.favored}} == true }">{{character.abilities.ride.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.sail.value" mote-max="character.abilities.sail.max" stat-name="character.abilities.sail.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.sail.favored}} == true }">{{character.abilities.sail.name}}</span>
+						</li>
+						<li class="list-group-item">
+							<span class="badge">
+								<sa-motes mote-count="character.abilities.socialize.value" mote-max="character.abilities.socialize.max" stat-name="character.abilities.socialize.name">
+							</span>
+							</span>
+							<span class="ability" ng-class="{'favored' : {{character.abilities.socialize.favored}} == true }">{{character.abilities.socialize.name}}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container-fluid -->
+	</div>
+	<!-- panel body -->
+</article>

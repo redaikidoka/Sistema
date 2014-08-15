@@ -1,0 +1,83 @@
+        <article class="panel panel-default">
+          <!-- Attributes panel -->
+          <header class="panel-heading">
+            <h2 class="panel-title text-uppercase">
+              <a data-toggle="collapse"  data-target="#attributes" class="glyphicon glyphicon-chevron-down"></a>
+              <a name="attributes"></a>Attributes</h2>
+          </header>
+          <div id="attributes" class="panel-body collapse in">
+            <!-- Attribute Panel Body -->
+            <div class="col-md-3 col-sm-3">
+              <!-- Physical Attribute List column -->
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span class="badge">
+                    <sa-motes mote-count="character.attributes.strength.value" mote-max="character.attributes.max" stat-name="str"></span>
+                  </span>
+                  <span class="stat">{{ character.attributes.strength.name }}</span>
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">
+                    <sa-motes mote-count="character.attributes.dexterity.value" mote-max="5" stat-name="dex"></span>
+                  </span>
+                  <span class="stat">{{ character.attributes.dexterity.name }}</span>
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">
+                    <sa-motes mote-count="character.attributes.stamina.value" mote-max="character.attributes.max" stat-name="character.attributes.stamina.name"></span>
+                  </span>
+                  <span class="stat">{{ character.attributes.stamina.name }}</span>
+                </li>
+              </ul>
+            </div>
+            <!-- /Physical Attribute List column-->
+            <div class="col-md-4 col-sm-4">
+              <!-- Social Attribute List column-->
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span class="badge">
+                    <sa-motes mote-count="character.attributes.charisma.value" mote-max="character.attributes.max" stat-name="character.attributes.charisma.name"></span>
+                  </span>
+                  <span class="stat">{{ character.attributes.charisma.name }}</span>
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">
+                    <sa-motes mote-count="character.attributes.manipulation.value" mote-max="character.attributes.max" stat-name="character.attributes.manipulation.name"></span>
+                  </span>
+                  <span class="stat">{{ character.attributes.manipulation.name }}</span>
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">
+                    <sa-motes mote-count="character.attributes.appearance.value" mote-max="character.attributes.max" stat-name="character.attributes.appearance.name"></span>
+                  </span>
+                  <span class="stat">{{ character.attributes.appearance.name }}</span>
+                </li>
+              </ul>
+            </div>
+            <!-- /Social Attribute List column-->
+            <div class="col-md-4 col-sm-4">
+              <!-- Mental Attribute List column-->
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span class="badge">
+                    <sa-motes mote-count="character.attributes.perception.value" mote-max="character.attributes.max" stat-name="character.attributes.perception.name"></span>
+                  </span>
+                  <span class="stat">{{ character.attributes.perception.name }}</span>
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">
+                    <sa-motes mote-count="character.attributes.intelligence.value" mote-max="character.attributes.max" stat-name="character.attributes.intelligence.name"></span>
+                  </span>
+                  <span class="stat">{{ character.attributes.intelligence.name }}</span>
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">
+                    <sa-motes mote-count="character.attributes.wits.value" mote-max="character.attributes.max" stat-name="character.attributes.wits.name"></span>
+                  </span>
+                  <span class="stat">{{ character.attributes.wits.name }}</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Mental Attribute List column-->
+          </div><!-- Attribute Panel Body -->
+        </article><!-- Attributes panel -->

@@ -1,0 +1,63 @@
+<article class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title text-uppercase">
+      <a data-toggle="collapse" data-target="#advantages" class="glyphicon glyphicon-chevron-down"></a>Advantages</h2>
+  </div>
+  <div id="advantages" class="panel-body collapse in">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Backgrounds</h3>
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="bg in character.backgrounds.bucket">
+              <span class="badge">
+                <sa-motes mote-count="bg.value" mote-max="bg.value" stat-name="bg.name">
+              </span>
+              <span class="ability">{{bg.name}}</span>
+              <span ng-repeat="detail in bg.details">
+                <br>
+                <span class="pull-right solar specialty" >
+                  <sa-motes mote-count="detail.value" mote-max="detail.value" />
+                </span>
+                <div class="specialty" >{{detail.name}}</div>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-5">
+          <h3>{{character.charms.length}} Charms</h3>
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="charm in character.charms">
+              <span class="badge">{{charm.cost}}</span>
+              </span>
+              <b> <a href="#" title="{{charm.tooltip}}">{{charm.name}}</a></b>
+            </li>
+
+          </ul>
+
+        </div>
+        <div class="col-md-4">
+          <h3>Charms</h3>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="badge">2
+                <span class="glyphicon glyphicon-certificate solar"></span>
+              </span>
+              <b> <a href="#" title="Dodge: xxxxxxxxx">Shadow Over Water</a></b>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">2
+                <span class="glyphicon glyphicon-repeat solar"></span>
+              </span>
+              <b> <a href="#" title="Add successes">2nd Dodge Excellency</a> </b>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container-fluid -->
+  </div>
+  <!-- panel-body -->
+</article>
